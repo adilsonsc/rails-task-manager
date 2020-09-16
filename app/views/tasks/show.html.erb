@@ -1,0 +1,24 @@
+<h1>Info about this task</h1>
+<p><strong>Title:</strong> <%= @task.title %> </p>
+<p><strong>Description:</strong> <%= @task.details %> </p>
+
+
+<p><% if @task.completed %>
+  <input id="completed" type="checkbox" checked>
+  <label for="completed">Task done!</label>
+
+  <% else %>
+  <input id="uncompleted" type="checkbox">
+  <label for="uncompleted">Task still waiting!</label>
+
+  <% end %>
+
+</p>
+<p>
+<%= link_to 'Edit this task', edit_task_path %>
+</p>
+
+<p>
+  <%= link_to 'All Tasks', tasks_path %>
+</p>
+
